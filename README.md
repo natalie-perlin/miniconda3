@@ -1,4 +1,4 @@
-# Installation of miniconda3 python package management library, and conda environements (e.g.,regional_workflow)
+# Installation of miniconda3, miniconda3 module for Lmod module environment (Lua-based), and conda environements (e.g., regional_workflow)
 
 Last revision: April 18, 2023  (update as needed) @natalie-perlin 
 
@@ -24,7 +24,7 @@ Last revision: April 18, 2023  (update as needed) @natalie-perlin
    e) verify the modulefile **miniconda3template.lua** template is present, and is specify a modulefiles location for miniconda3, e.g.,
                `MODULEFILES="$PREFIX0/modulefiles"`
 
-3. Configure the modulefile *miniconda3template.lua* and specify local prefix, e.g.,
+3. Configure the modulefile *miniconda3template.lua* and specify a local prefix, e.g.,
        `local prefix = pathJoin("/home",pkgName)`
 
 4. Run the installation script wrapper: 
