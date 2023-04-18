@@ -1,8 +1,8 @@
-# Installation of Miniconda3 and regional_workflow environment
+# Installation of miniconda3 python package management library, and conda environements (e.g.,regional_workflow)
 
-Last revision: December 5, 2022  (update as needed) @natalie-perlin 
+Last revision: April 18, 2023  (update as needed) @natalie-perlin 
 
-1. Find a right installer script to download from **URL="https://repo.anaconda.com/miniconda"**, or determine its correct name, e.g., `Miniconda3-py39_4.12.0-Linux-x86_64.sh`
+1. Find a right installer script to download from **URL="https://repo.anaconda.com/miniconda"**, or determine its correct name, e.g., `Miniconda3-py310_23.1.0-1-Linux-x86_64.sh`
 
 2. Configure the installation script **miniconda3_install.sh** as follows:
 
