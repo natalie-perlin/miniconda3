@@ -32,7 +32,7 @@ Last revision: April 18, 2023  (update as needed) @natalie-perlin
    
 5. Create a regional_workflow environment with the packages needed to run the UFS-SRW
    App and to use graphic packages for plotting. Packages to be installed are listed
-   in regional_workflow.yaml file that is expected to be present in the same 
+   in `regional_workflow.yaml` file that is expected to be present in the same 
    directory as the installation script  **miniconda3_regional_workflow_env.sh**.   
    Configure the env. varialbles in the script similar to Step 2,
    and then launch it:   
