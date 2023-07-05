@@ -5,8 +5,8 @@ source $BASH_ENV
 #
 set -x
 URL="https://repo.anaconda.com/miniconda"
-installer="Miniconda3-py310_23.1.0-1-Linux-x86_64.sh"
-version="23.1.0"
+installer="Miniconda3-py39_4.12.0-Linux-x86_64.sh"
+version="4.12.0"
 [[ -f "$installer" ]] || wget -nv $URL/$installer
 # The PREFIX below is the target installation, try local directory first
 PREFIX0="/lustre/miniconda3"
