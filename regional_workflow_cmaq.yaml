@@ -1,0 +1,15 @@
+name: regional_workflow_cmaq
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9.12
+  - f90nml=1.4*
+  - jinja2=3.0*
+  - pyyaml=6.0*
+  - scipy
+  - matplotlib
+  - pygrib
+  - cartopy
+  - netcdf4
+  - xarray
