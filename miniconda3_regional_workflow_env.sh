@@ -4,7 +4,7 @@ export BASH_ENV=/apps/lmod/lmod/init/profile
 source $BASH_ENV
 #
 PREFIX0="/lustre/miniconda3"
-version="23.1.0"
+version="4.12.0"
 MODULEFILES="${PREFIX0}/modulefiles"
 module use $MODULEFILES
 module avail miniconda3
