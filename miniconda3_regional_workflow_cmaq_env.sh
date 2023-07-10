@@ -11,7 +11,7 @@ module avail miniconda3
 module load  miniconda3/$version
 
 # Create and install regional_workflow environment
-ENV_NAME="workflow_tools"
+ENV_NAME="regional_workflow_cmaq"
 conda env list
 conda env create --name $ENV_NAME --file=${ENV_NAME}.yaml
 #
