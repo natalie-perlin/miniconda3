@@ -1,10 +1,12 @@
 #!/bin/bash
 # Initialize Lmod:
-export BASH_ENV=/apps/lmod/lmod/init/profile
-source $BASH_ENV
+echo $LMOD_PKG
+ENV=$LMOD_PKG/init/profile
+source $ENV
+export BASH_ENV=$LMOD_PKG/init/bash
 #
-PREFIX0="/lustre/miniconda3"
-version="4.12.0"
+PREFIX0=${1:-"/lustre/miniconda3"}
+version=${2:-"4.12.0"}
 MODULEFILES="${PREFIX0}/modulefiles"
 module use $MODULEFILES
 module avail miniconda3
