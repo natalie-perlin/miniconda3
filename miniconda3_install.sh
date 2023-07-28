@@ -1,16 +1,19 @@
 #!/bin/bash
 # Initialize Lmod:
-export BASH_ENV=/apps/lmod/lmod/init/profile
-source $BASH_ENV
+echo $LMOD_PKG 
+ENV=$LMOD_PKG/init/profile
+source $ENV
+export BASH_ENV=$LMOD_PKG/init/bash
 #
 set -x
+name="miniconda3"
+version="4.12.0"
+PREFIX0=${1:-"/lustre/$name"}
+PREFIX="${PREFIX0}/${version}"
 URL="https://repo.anaconda.com/miniconda"
 installer="Miniconda3-py39_4.12.0-Linux-x86_64.sh"
-version="4.12.0"
 [[ -f "$installer" ]] || wget -nv $URL/$installer
 # The PREFIX below is the target installation, try local directory first
-PREFIX0="/lustre/miniconda3"
-PREFIX="${PREFIX0}/${version}"
 [[ -d $PREFIX ]] && echo "Directory $PREFIX exists"
 bash $installer -b -p $PREFIX -s
 export CONDA_ROOT=$PREFIX
@@ -42,4 +45,7 @@ conda install -y git-lfs
 TEMPLATES=$PWD
 MODULEFILES="${PREFIX0}/modulefiles"
 [[ -d "${MODULEFILES}/miniconda3" ]] || mkdir -p ${MODULEFILES}/miniconda3/
-[[ -f "${TEMPLATES}/miniconda3template.lua" ]] && cp -v ${TEMPLATES}/miniconda3template.lua  ${MODULEFILES}/miniconda3/${version}.lua
+if [[ -f "${TEMPLATES}/miniconda3template.lua" ]]; then
+  sed "s|local prefix.*|local prefix=\"$PREFIX0\"|" ${TEMPLATES}/miniconda3template.lua  >  ${MODULEFILES}/miniconda3/${version}.lua
+fi  
+echo "Finished installation of $name, version $version"
