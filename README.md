@@ -1,4 +1,4 @@
-# Installation of miniconda3, miniconda3 module for Lmod module environment (Lua-based), and conda environements (e.g., regional_workflow)
+# Installation of miniconda3, miniconda3 module for Lmod module environment (Lua-based), and conda environements (e.g., workflow_tools, regional_workflow)
 
 1. Find a right installer script to download from **URL="https://repo.anaconda.com/miniconda"**, or determine its correct name, e.g., `Miniconda3-py39_4.12.0-Linux-x86_64.sh`
 
