@@ -16,7 +16,11 @@
 3. Specify a correct name of the installer in a wrapper script **miniconda3_install.sh**, e.g.,
           `installer="Miniconda3-py39_4.12.0-Linux-x86_64.sh"`
 
-4. Verify that a modulefile **miniconda3template.lua** template is present in a directory from which the runscript is lauched.
+4. Verify that a modulefile **miniconda3template.lua** template is present in a directory from which the runscript is lauched. Edit the `local prefix` variable in the modulefile template to specify the installation path; if the installation directory is /lustre/minconda3, the variable `local prefix` is set as following in the `miniconda3template.lua`:
+  ```
+  local prefix = pathJoin("/lustre/",pkgName)
+  ```
+  where the variable `pkgName` expands to `miniconda3`.
 
 5. Run the installation script wrapper, with optional arguments:
     (1) installation directory,  (2) conda version 
