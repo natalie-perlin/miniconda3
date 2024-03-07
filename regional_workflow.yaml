@@ -10,4 +10,4 @@ dependencies:
   - scipy
   - matplotlib=3.5.2*
   - pygrib
-  - cartopy
+  - cartopy=0.18.0
